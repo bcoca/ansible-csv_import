@@ -1,5 +1,7 @@
 Simple role that maps a matching row in a CSV file to host variables
 
+Use ``` ansible-doc -t role <role name>``` for docs.
+
 Example:
 
 play.yml
