@@ -1,0 +1,36 @@
+argument_specs:
+  main:
+    short_description: create vars from csv file
+    description:
+        - This role's main entry point maps csv files into variables, one row per invocation with a matching search term.
+        - The variables will either be assumed to from the first line of the file or provided by the role caller C(csv_columns).
+    author: me
+    options:
+      csv_columns:
+        description:
+          - A list of names of the columns in the csv file, in matching order.
+          - If not provided the first line of the file will be used instead.
+        type: list
+        required: no
+      csv_default:
+          description: Value to use if there is no match in the csv file.
+          type: raw
+          required: no
+      csv_delimiter:
+          description: CSV file delimiter.
+          type: string
+          default:  ','
+          required: no
+      csv_file_name:
+          description: Path to the CSV file.
+          type: path
+          required: yes
+      csv_search_column:
+          description: Column on which search will be performed.
+          type: int
+          default: 0
+          required: no
+      csv_search_term:
+          description: Term to match in the CSV file column indicated.
+          type: raw
+          required: yes

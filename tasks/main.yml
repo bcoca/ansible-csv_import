@@ -1,0 +1,6 @@
+- name: convert matching csv entry to host variables
+  set_fact:
+        '{{csv_columns[item|int]}}': "{{ csv_line|default(csv_default) }}"
+  loop: '{{range(csv_columns|length)}}'
+  vars:
+      csv_line: "{{ lookup('csvfile', csv_search_term, file=csv_file_name, delimiter=csv_delimiter, keycol=csv_search_column, col=item) }}"
