@@ -18,8 +18,8 @@ argument_specs:
           required: no
       csv_delimiter:
           description: CSV file delimiter.
-          type: string
-          default:  ','
+          type: str
+          default: ','
           required: no
       csv_file_name:
           description: Path to the CSV file.
