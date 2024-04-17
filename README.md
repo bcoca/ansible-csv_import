@@ -22,3 +22,16 @@ ip,net,mask,noword,her,him,second
 129.0.0.1,10.2.0.1,23,nines,aayush,pepete,129.0.0.2
 
 ```
+
+created variables:
+```
+    "new_variables": {
+        "ip": "127.0.0.1"
+        "net": "10.0.0.1"
+        "mask": "24"
+        "noword": "nones"
+        "her": "lola"
+        "him": "pepe"
+        "second": "127.0.0.2"
+    },
+```
